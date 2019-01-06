@@ -38,7 +38,7 @@ library(ggrepel)
 # I assume that the script and the pdf are in the same directory. Adjust
 # accordingly, using setwd() or here() as you prefer. Beware the wrath of Jenny
 # Bryan: https://www.tidyverse.org/articles/2017/12/workflow-vs-script/.
-txt <- pdf_text("polsci400.pdf")
+txt <- pdf_text("polisci400.pdf")
 ft <- strsplit(txt, "\\n")
 ```
 
@@ -204,14 +204,16 @@ ft2$uphd2 <- factor(ft2$uphd2, levels = topfive)
 p2 <- ggplot(data = ft2, aes(x = phdago, y = citecount, color = uphd2)) +
     geom_point(data = subset(ft2, is.na(uphd2)), color = "grey80") +
     geom_point(data = subset(ft2, !is.na(uphd2))) +
-    xlab("Years since PhD") +
-    ylab("Citation Counts") +
+    labs(x = "Years since PhD",
+         y = "Citation Counts",
+         caption = "Data: Kim and Grofman (2019), https://doi.org/10.1017/S1049096518001786 \n Visualization: @olhxl  https://github.com/ohexel/polisci400/") +
     scale_color_brewer(palette = "Set2") +
     scale_y_log10(breaks = c(5000,10000,20000,500000,100000),
                   #labels = c("5*10^3","10^4","2*10^4","5*10^4","10^5")) +
                   labels = c("5000","10,000","20,000","50,000","100,000")) +
-    guides(color = guide_legend(title = "PhD-granting dpt")) +
-    theme_bw()
+    guides(color = guide_legend(title = "PhD-granting dept")) +
+    theme_bw() +
+    theme(plot.caption = element_text(colour = "grey", size = 9))
 p2
 ```
 
