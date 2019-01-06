@@ -5,6 +5,6 @@ Data from [Kim and Grofman, The Political Science 400](https://www.cambridge.org
 
 I extract the data from the table in [Appendix A](https://static.cambridge.org/resource/id/urn:cambridge.org:id:binary:20190104104300674-0444:sup-mat:20190104104300674-0444:S1049096518001786sup002.pdf) on the 400 most cited faculty. The table containts names, current (2017) school of employment, PhD-granting institution, year of PhD, and citation counts. 
 
-Rmarkdown [here](./polisci400.Rmd).
-
 Markdown with pretty pictures [here](./polisci400.md).
+
+Rmarkdown [here](./polisci400.Rmd).
