@@ -121,6 +121,10 @@ head(ft2)
     ## 5 U of Wisconsin Madison    1984     62048
     ## 6                Caltech    1978     57747
 
+``` r
+write.csv(ft2, file = "polisci400.csv")
+```
+
 Looks good. Except that everything is a factor?! (Oh `R`, why? I know it's probably my fault.) We want to change that. In addition, it seems more intuitive to create a variable "years since PhD" rather than PhD year and to concatenate first and last names. I'm sure there are cool analyses to be done on the distribution of the first letters of surnames, but I cannot think of any right now.
 
 Let the plotting begin
