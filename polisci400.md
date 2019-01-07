@@ -103,23 +103,17 @@ str(ft2)
     ##  $ citecount: Factor w/ 395 levels "26092","26167",..: 29 28 27 26 25 24 23 22 21 20 ...
 
 ``` r
-head(ft2)
+knitr::kable(head(ft2))
 ```
 
-    ##   firstname  lastname                           unow
-    ## 1    Ronald Inglehart                  U of Michigan
-    ## 2 Robert O.   Keohane                     Stanford U
-    ## 3    Robert   Axelrod                  U of Michigan
-    ## 4     Nancy    Fraser New School for Social Research
-    ## 5      Gary      King                      Harvard U
-    ## 6  Barry R.  Weingast                     Stanford U
-    ##                     uphd yearphd citecount
-    ## 1           U of Chicago    1967     94125
-    ## 2              Harvard U    1966     89856
-    ## 3                 Yale U    1969     71958
-    ## 4                   SUNY    1980     63820
-    ## 5 U of Wisconsin Madison    1984     62048
-    ## 6                Caltech    1978     57747
+| firstname | lastname  | unow                           | uphd                   | yearphd | citecount |
+|:----------|:----------|:-------------------------------|:-----------------------|:--------|:----------|
+| Ronald    | Inglehart | U of Michigan                  | U of Chicago           | 1967    | 94125     |
+| Robert O. | Keohane   | Stanford U                     | Harvard U              | 1966    | 89856     |
+| Robert    | Axelrod   | U of Michigan                  | Yale U                 | 1969    | 71958     |
+| Nancy     | Fraser    | New School for Social Research | SUNY                   | 1980    | 63820     |
+| Gary      | King      | Harvard U                      | U of Wisconsin Madison | 1984    | 62048     |
+| Barry R.  | Weingast  | Stanford U                     | Caltech                | 1978    | 57747     |
 
 ``` r
 write.csv(ft2, file = "polisci400.csv")

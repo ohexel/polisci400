@@ -93,7 +93,7 @@ for (page in 1:length(ft)){
     ft2 <- rbind(ft2, dfclean)
 }
 str(ft2)
-head(ft2)
+knitr::kable(head(ft2))
 write.csv(ft2, file = "polisci400.csv")
 ```
 
